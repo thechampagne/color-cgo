@@ -21,49 +21,62 @@
  */
 package main
 
+/*
+ #include <stdlib.h>
+ #include <stdarg.h>
+ */
 import "C"
 import (
+	"unsafe"
 	"github.com/fatih/color"
 )
 
 //export _Black
 func _Black(format *C.char) {
   color.Black(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _Red
 func _Red(format *C.char) {
   color.Red(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _Green
 func _Green(format *C.char) {
   color.Green(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _Yellow
 func _Yellow(format *C.char) {
   color.Yellow(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _Blue
 func _Blue(format *C.char) {
   color.Blue(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _Magenta
 func _Magenta(format *C.char) {
   color.Magenta(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _Cyan
 func _Cyan(format *C.char) {
   color.Cyan(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _White
 func _White(format *C.char) {
   color.White(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _BlackString
@@ -109,41 +122,49 @@ func _WhiteString(format *C.char) *C.char {
 //export _HiBlack
 func _HiBlack(format *C.char) {
   color.HiBlack(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _HiRed
 func _HiRed(format *C.char) {
   color.HiRed(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _HiGreen
 func _HiGreen(format *C.char) {
   color.HiGreen(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _HiYellow
 func _HiYellow(format *C.char) {
   color.HiYellow(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _HiBlue
 func _HiBlue(format *C.char) {
   color.HiBlue(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _HiMagenta
 func _HiMagenta(format *C.char) {
   color.HiMagenta(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _HiCyan
 func _HiCyan(format *C.char) {
   color.HiCyan(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _HiWhite
 func _HiWhite(format *C.char) {
   color.HiWhite(C.GoString(format))
+  C.free(unsafe.Pointer(format))
 }
 
 //export _HiBlackString

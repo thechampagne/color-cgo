@@ -42,6 +42,12 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 /* Start of preamble from import "C" comments.  */
 
 
+#line 24 "color.go"
+
+ #include <stdlib.h>
+ #include <stdarg.h>
+ 
+#line 1 "cgo-generated-wrapper"
 
 
 /* End of preamble from import "C" comments.  */
@@ -86,9 +92,6 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 #endif
 
 /* End of boilerplate cgo prologue.  */
-
-#include <stdlib.h>
-#include <stdarg.h>
 
 #ifdef __cplusplus
 extern "C" {
